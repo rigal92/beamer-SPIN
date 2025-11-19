@@ -1,5 +1,5 @@
 # beamer-SPIN
-SPIN theme for beamer. 
+SPIN theme for beamer. The theme has not been thoroughly tested.
 
 Here is a sample of the slides.
 ![Sample](test/sample.svg)
