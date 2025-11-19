@@ -5,14 +5,15 @@
 \setbeamertemplate{background}{
   \begin{tikzpicture}
   \useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
-  \ifnum\thepage>1\relax%
-  \else
+  \ifnum\thepage=1\relax%
   \node [anchor=east] at (\the\paperwidth,.5\paperheight) {\includegraphics[width=.188\paperwidth]{../img/side-title}};
    \fi
   \end{tikzpicture}
 }
 
-
+\setbeamertemplate{background canvas sectionpage}{%
+  \tikz\node[fill=SectionBlue,minimum width=\paperwidth,minimum height=\paperheight] {};
+}
 
 \setbeamertemplate{title page}{
   \begin{minipage}[t][\paperheight]{\textwidth}
@@ -49,4 +50,26 @@
   \par
 
 }
+\setbeamertemplate{section page}
+{
+    \setbeamercolor{background canvas}{bg=white}
+    \frame{
+      \begin{centering} 
+      \usebeamercolor[fg]{section title} 
+      \usebeamerfont{section title} 
+       \insertsection
+      \par 
+      \end{centering}   
+    }
+}
+% \setbeamertemplate{section page}{
+%   \setbeamercolor{background canvas}{bg=blue}
+%   \begin{centering}
+%     \begin{beamercolorbox}[sep=20pt,center,wd=\paperwidth]{section title}
+%       {\usebeamerfont{section title}\insertsection}
+%     \end{beamercolorbox}
+%   \end{centering}
+% }
+
+
 \mode<all>
