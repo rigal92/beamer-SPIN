@@ -1,0 +1,45 @@
+\mode<presentation>
+\usetikzlibrary{positioning}
+
+% Backgroung
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,-\the\paperheight);
+  \draw [spinBlue, line width=4px] (0,678.312px) -- (\the\paperwidth,678.312px);
+  % \node at (-0.1,-0.1) [anchor=south west]{\includegraphics[width=.3\paperwidth]{graphene_corner}};
+  % \node (SPIN) at (\the\paperwidth-10,0.1) [anchor=south east]{\includegraphics[height=.1\paperheight]{Logo:Spin}};
+  % \node (CNRS) [left = .3 of UCBL] [anchor=east]{\includegraphics[height=.055\paperheight]{CNRS}};
+
+  % \ifnum\thepage>1\relax%
+  % % \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  % \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  % \node (SPIN) at (0.2,0.1) [anchor=south west]{\includegraphics[height=.1\paperheight]{Logo:Spin}};
+  %  \fi
+  \end{tikzpicture}
+}
+
+
+% Title page
+\defbeamertemplate*{title page}{phd}[1][]
+{ %
+	\vskip1cm%
+    \begin{beamercolorbox}[wd=\paperwidth,center,dp=0pt,#1]{title page header}
+      \usebeamerfont{title}\inserttitle\par%
+    \end{beamercolorbox}%
+    \vskip0.2cm%
+    \begin{beamercolorbox}[center,dp=0pt,#1]{author}
+      \usebeamerfont{author}\insertauthor%
+    \end{beamercolorbox}
+     % \vskip0.2cm%
+    \begin{beamercolorbox}[center,dp=0pt,#1]{date}
+      \usebeamerfont{date}\insertdate%
+    \end{beamercolorbox}    
+    \vskip1cm%
+    \begin{beamercolorbox}[leftskip=5.8cm,dp=0pt,#1]{institute}
+      \usebeamerfont{institute}\insertinstitute
+    \end{beamercolorbox}
+  \vfill
+}
+
+
+\mode<all>
