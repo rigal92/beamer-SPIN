@@ -2,6 +2,8 @@
 
 % Requirement
 \RequirePackage{tikz}
+\RequirePackage{geometry}
+\geometry{papersize={8in,4.5in}}
 
 
 \useinnertheme{spin}
@@ -9,10 +11,19 @@
 \usecolortheme{spin}
 \usefonttheme{spin}
 
-\setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{footline}[frame number]
 \setbeamertemplate{itemize items}[circle]
 % \setbeamertemplate{frametitle}[framenumber]
+
+\newcommand{\insertevent}{}
+\newcommand{\insertplace}{}
+\newcommand{\insertpresentdate}{}
+\newcommand{\insertrole}{}
+
+\newcommand{\event}[1]{\renewcommand{\insertevent}{#1}}
+\newcommand{\place}[1]{\renewcommand{\insertplace}{#1}}
+\newcommand{\presentdate}[1]{\renewcommand{\insertpresentdate}{#1}}
+\newcommand{\role}[1]{\renewcommand{\insertrole}{#1}}
+
 
 
 \mode<all>

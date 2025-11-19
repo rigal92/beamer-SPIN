@@ -1,7 +1,12 @@
 \mode<presentation>
-\usepackage{xcolor}
+\RequirePackage{xcolor}
 
 \definecolor{spinBlue}{HTML}{002f5f}
+\setbeamercolor{author in head/foot}{fg=black,bg=white}
+\setbeamercolor{frametitle}{bg=spinBlue,fg=white}
+\setbeamercolor*{title page header}{fg=spinBlue}
+\setbeamercolor{title}{fg=spinBlue}
+\setbeamercolor*{author}{fg=black}
 
 
 
@@ -9,40 +14,4 @@
 
 
 
-
-
-
-
-
-
-
-
-\definecolor{ILM purple}{RGB}{103,33,128}
-\definecolor{ILM blue}{RGB}{98,196,221}
-\definecolor{ILM orange}{RGB}{255,166,40}
-\definecolor{meet}{RGB}{31,119,180}
-
-
-
-% title bg
-\setbeamercolor*{title background}{fg=ILM purple}
-
-% title text
-\setbeamercolor*{title page header}{fg=ILM purple}
-\setbeamercolor*{author}{fg=ILM orange}
-\setbeamercolor*{date}{fg=ILM orange}
-\setbeamercolor*{institute}{fg=ILM purple}
-
-
-
-%frame
-% \setbeamercolor{frametitle}{fg=white}
-\setbeamercolor{frametitle}{fg=ILM purple}
-%block
-\setbeamercolor{block title}{fg=ILM purple}
-
-% \setbeamercolor{alerted text}{fg=ILM purple}
-\setbeamercolor{alerted text}{fg=red!80!blue}
-
-\mode
-<all>
+\mode<all>

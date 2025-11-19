@@ -1,12 +1,36 @@
 \mode<presentation>
 
-\usefonttheme{serif}
+\RequirePackage{ifxetex}
+\RequirePackage{ifluatex}
 
-\setbeamerfont{title}{size=\Large,shape=\bfseries}
+% check if compiling with xelatex or lualatex
+\ifboolexpr{bool {xetex} or bool {luatex}}{
+    \@ifpackageloaded{fontspec}{
+        \PassOptionsToPackage{no-math}{fontspec}
+      }{
+        \RequirePackage[no-math]{fontspec}
+      }
+
+
+    % check if fonts exist and assign
+    \IfFontExistsTF{Roboto}{
+    \setsansfont{Roboto} % Set Roboto as sans-serif
+    \renewcommand{\familydefault}{\sfdefault} % Use sans-serif as default
+    }
+    {
+        %default to nothing
+    }
+}
+
+
+\setbeamerfont{author in head/foot}{size=\footnotesize,shape=\itshape}
+
+
+\setbeamerfont{title}{size=\Huge,shape=\bfseries}
 \setbeamerfont{subtitle}{size=\Large,shape=\bfseries}
-\setbeamerfont{author}{size=\scriptsize,shape=\bfseries}
+\setbeamerfont{author}{size=\LARGE}
 \setbeamerfont{institute}{size=\scriptsize,shape=\bfseries}
-\setbeamerfont{date}{size=\footnotesize}
-% \setbeamerfont{frametitle}{size=\Large}
+\setbeamerfont{date}{size=\scriptsize}
+\setbeamerfont{frametitle}{size=\LARGE,shape=\bfseries}
 
 \mode<all>

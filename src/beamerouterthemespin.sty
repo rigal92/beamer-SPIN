@@ -1,0 +1,33 @@
+\mode<presentation>
+
+\setbeamertemplate{footline}{
+  \leavevmode%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=1.5pt,dp=0pt]{footline}
+    \color{spinBlue}\rule{\paperwidth}{1.5pt}
+  \end{beamercolorbox}
+
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=4ex,dp=2ex, center]{author in head/foot}
+      \usebeamerfont{author in head/foot}
+      \hbox to \paperwidth{
+        \hspace*{.25em}\insertshortauthor
+        \hfill
+        \insertevent
+        \hfill
+        \insertplace\ - \insertdate\hspace*{.25em}
+      }
+    \end{beamercolorbox}}
+  \vskip0pt
+}
+
+
+\setbeamertemplate{frametitle}{
+  \nointerlineskip
+  \begin{beamercolorbox}[leftskip=1ex,wd=\paperwidth]{frametitle}
+    \raisebox{1.7ex}{%
+      \usebeamerfont{frametitle}\insertframetitle%
+    }
+    \hfill\includegraphics[height=.13\pageheight]{../img/logo-white}\hspace{0.2cm}
+  \end{beamercolorbox}
+  }
+\mode<all>
