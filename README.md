@@ -1,6 +1,6 @@
 # beamer-SPIN
 SPIN theme for beamer. 
-![Sample](test/sample.png)
+![Sample](test/sample.svg)
 
 ## Install (instruction tested in Linux)
 Install the the theme by placing it in the beamer's theme location (e.g. ~/texmf/tex/latex/beamer/). The files in the img folder can also be made by placing them in global or local folders (e.g. ~/texmf/tex/latex/images/).
